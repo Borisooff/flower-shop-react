@@ -1,0 +1,33 @@
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 31px 0;
+    }
+
+    &__imgbox {
+        margin-right: 30px;
+    }
+
+    &__nav {
+        margin-right: 30px;
+
+        &__link {
+            margin-right: 23px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    &__profile {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__cart {
+        cursor: pointer;
+    }
+}
