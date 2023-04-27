@@ -1,0 +1,56 @@
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px 17px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &__imgbox {
+        border-radius: 5px;
+        overflow: hidden;
+        max-width: 251px;
+        max-height: 230px;
+        margin-bottom: 9px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 38px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__price {
+        color: #838383;
+    }
+
+    &__cart {
+        color: #FF8F52;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 94px;
+            width: 21px;
+            height: 19px;
+            background: url('../../../public/assets/bestSelers/mini-cart-icon.svg');
+        }
+    }
+}

@@ -16,8 +16,17 @@ a {
   display: inline-block;
 }
 
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
 body {
-  background-color: #fff;
+  background-color: #ebebeb;
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -28,4 +37,44 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
+}
+
+.btn {
+  background: #FF8F52;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 22px;
+  transition: all .3s;
+  &:hover{
+    transform: scale(1.03);
+  }
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 33px;
+
+  &::before,
+  &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #969696;
+      width: 165px;
+      height: 1px;
+      border-radius: 2px;
+  }
+
+  &::before {
+      left: 325px;
+  }
+
+  &::after {
+      right: 325px;
+  }
 }

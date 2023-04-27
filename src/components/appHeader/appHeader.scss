@@ -1,4 +1,6 @@
 .header {
+    background-color: #fff;
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -22,12 +24,19 @@
         }
     }
 
-    &__profile {
+    &__nav__item {
+        cursor: pointer;
         margin-right: 20px;
-        cursor: pointer;
-    }
+        transition: all .3s;
 
-    &__cart {
-        cursor: pointer;
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1)
+            }
+        }
     }
 }

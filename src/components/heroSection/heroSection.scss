@@ -1,0 +1,33 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 73px 0 115px 0;
+    // height: 100vh;
+
+    &__content {
+        max-width: 406px;
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 36px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(3, 1fr);
+        gap: 20px;
+
+        img {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+
+    &__subtitle {
+        line-height: 23px;
+        color: #838383;
+        margin-bottom: 46px;
+    }
+}

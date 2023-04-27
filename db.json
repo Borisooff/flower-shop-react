@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "title": "Daisy",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 5,
+      "id": 1,
+      "sales": 5
+    },
+    {
+      "title": "Periwinkle",
+      "url": "/assets/cards/Periwinkle.jpg",
+      "price": 5,
+      "id": 2,
+      "sales": 10
+    },
+    {
+      "title": "Sun flower",
+      "url": "/assets/cards/Sun-flower.jpg",
+      "price": 5,
+      "id": 4,
+      "sales": 8
+    },
+    {
+      "title": "White rose",
+      "url": "/assets/cards/White-rosejpg.jpg",
+      "price": 5,
+      "id": 5,
+      "sales": 19
+    },
+    {
+      "title": "Red rose",
+      "url": "/assets/cards/Red-rose.jpg",
+      "price": 5,
+      "id": 6,
+      "sales": 25
+    }
+  ]
+}
