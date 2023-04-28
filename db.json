@@ -33,7 +33,28 @@
       "url": "/assets/cards/Red-rose.jpg",
       "price": 5,
       "id": 6,
-      "sales": 25
+      "sales": 37
+    },
+    {
+      "title": "Orchid",
+      "url": "/assets/cards/Orchid.jpg",
+      "price": 20,
+      "id": 7,
+      "sales": 8
+    },
+    {
+      "title": "Peony",
+      "url": "/assets/cards/Peony.jpg",
+      "price": 5,
+      "id": 8,
+      "sales": 14
+    },
+    {
+      "title": "Tulip",
+      "url": "/assets/cards/Tulip.jpg",
+      "price": 5,
+      "id": 9,
+      "sales": 30
     }
   ]
 }

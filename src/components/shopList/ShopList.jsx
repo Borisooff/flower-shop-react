@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import useShopService from '../../services/shopService';
 import Card from '../card/Card';
+import Spinner from '../spinner/Spinner';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './shopList.scss';
 
-const ShopList = () => {
+const ShopList = ({search}) => {
     const { loading, error, getAllProducts } = useShopService();
 
-    const [shopList, setShopList] = useState([]);
-    const [productsLoading, setPrductsLoading] = useState(false);
+    const [flowersList, setFlowersList] = useState([]);
 
     useEffect(() => {
         onRequest();
@@ -16,19 +17,21 @@ const ShopList = () => {
 
     const onRequest = () => {
         getAllProducts()
-        .then(onProductsLoading)
+            .then(setFlowersList)
     }
 
-    const onProductsLoading = (newShopList) => {
-        setShopList(shopList => [...shopList, ...newShopList])
-    }
+    const searchingFlowers = flowersList.filter(item => {
+        return item.title.toLowerCase().includes(search.toLowerCase())
+    })
 
     return (
         <div className='shop'>
-            {shopList.map(item => {
+            {searchingFlowers.map(item => {
                 const { id, ...itemProps } = item;
                 return <Card key={id} {...itemProps} />
             })}
+            {loading ? <Spinner /> : null}
+            {error ? <ErrorMessage /> : null}
         </div>
     );
 }
