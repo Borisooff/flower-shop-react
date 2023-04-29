@@ -11,9 +11,9 @@ const SearchPanel = ({ onSearchChange }) => {
 
     return (
         <div className='panel'>
-            <button onClick={ ()=> setFilterOpen(!filterOpen)} 
-            className='panel__filterBtn'>Filtering</button>
-            {filterOpen ? <Filter /> : null}
+            <button onClick={() => setFilterOpen(!filterOpen)}
+                className='panel__filter__btn'>Filtering</button>
+            <Filter active={filterOpen} setActive={setFilterOpen} />
             <form className='search'>
                 <input
                     className='search__input'
@@ -34,6 +34,9 @@ const SearchPanel = ({ onSearchChange }) => {
                     </svg>
                 </button>
             </form>
+            <div className="price">
+                <span>Cheep</span>
+            </div>
         </div>
     );
 }
