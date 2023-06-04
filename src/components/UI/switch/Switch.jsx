@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import classes from './switch.module.scss';
 
-const Switch = (filter) => {
+const Switch = ({filter}) => {
     return (
-        <div key={filter} className="filter__item">
-            <label className='filter__label' htmlFor={filter}>{filter}</label>
-            <label className='switch' htmlFor={filter}>
-                <input className='switch__input' type="checkbox" id={filter} />
-                <span className='switch__slider'></span>
+        <div className={classes.filter}>
+            <label className={classes.label} htmlFor={filter}>{filter}</label>
+            <label className={classes.switch} htmlFor={filter}>
+                <input className={classes.switch__input} type="checkbox" id={filter} />
+                <span className={classes.switch__slider}></span>
             </label>
         </div>
     )

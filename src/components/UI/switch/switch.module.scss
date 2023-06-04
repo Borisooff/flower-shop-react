@@ -1,0 +1,64 @@
+.filter {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    label {
+        cursor: pointer;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.label {
+    margin-right: 10px;
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 23px;
+
+    &__input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked+.switch__slider {
+            background-color: #FF8F52;
+
+            &::before {
+                transform: translateX(14px);
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #ebebeb;
+        border-radius: 34px;
+        transition: all .3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            cursor: pointer;
+            left: 3px;
+            bottom: 1.1px;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: all .3s;
+
+        }
+    }
+}

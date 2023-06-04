@@ -1,4 +1,6 @@
 import React from 'react';
+import Modal from '../UI/modal/Modal';
+import Switch from '../UI/switch/Switch';
 
 import './filter.scss'
 
@@ -9,8 +11,7 @@ const Filter = ({ active, setActive }) => {
     ]
 
     return (
-        <div className={active ? 'modal active' : 'modal'}
-            onClick={() => setActive(false)}>
+        <Modal active={active} setActive={setActive}>
             <form className={active ? 'filter active' : 'filter'}
                 onClick={e => e.stopPropagation()}>
                 <div className="filter__close"
@@ -18,19 +19,13 @@ const Filter = ({ active, setActive }) => {
                     <img src="./assets/shop/close-icon.svg" alt="close" />
                 </div>
                 <div className="filter__title">Filtering</div>
-                {filterData.map(item => {
+                {filterData.map(filter => {
                     return (
-                        <div key={item} className="filter__item">
-                            <label className='filter__label' htmlFor={item}>{item}</label>
-                            <label className='switch' htmlFor={item}>
-                                <input className='switch__input' type="checkbox" id={item} />
-                                <span className='switch__slider'></span>
-                            </label>
-                        </div>
+                        <Switch filter={filter}/>
                     )
                 })}
             </form>
-        </div>
+        </Modal>
     );
 }
 
