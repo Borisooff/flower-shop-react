@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Filter from '../filter/Filter';
+import ModInput from '../UI/input/ModInput';
 
 import './searchPanel.scss';
 
-const SearchPanel = ({ onSearchChange }) => {
+const SearchPanel = ({ onSearchChange, updateCheepFilter }) => {
     const [search, setSearch] = useState('');
     const [filterOpen, setFilterOpen] = useState(false);
+    const [cheep, setCheep] = useState(true);
 
     onSearchChange(search);
+
+    useEffect(() => {
+        updateCheepFilter(cheep)
+    }, [cheep])
 
     return (
         <div className='panel'>
@@ -15,9 +21,7 @@ const SearchPanel = ({ onSearchChange }) => {
                 className='panel__filter__btn'>Filtering</button>
             <Filter active={filterOpen} setActive={setFilterOpen} />
             <form className='search'>
-                <input
-                    className='search__input'
-                    type="text"
+                <ModInput
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder='Search....' />
@@ -34,8 +38,8 @@ const SearchPanel = ({ onSearchChange }) => {
                     </svg>
                 </button>
             </form>
-            <div className="price">
-                <span>Cheep</span>
+            <div className={cheep ? "panel__price" : "panel__price expensive"} onClick={() => setCheep(() => !cheep)}>
+                <span>{cheep ? 'Cheep' : 'Expensive'}</span>
             </div>
         </div>
     );

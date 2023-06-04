@@ -6,7 +6,7 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './shopList.scss';
 
-const ShopList = ({search}) => {
+const ShopList = ({ search, cheepFilter }) => {
     const { loading, error, getAllProducts } = useShopService();
 
     const [flowersList, setFlowersList] = useState([]);
@@ -24,9 +24,18 @@ const ShopList = ({search}) => {
         return item.title.toLowerCase().includes(search.toLowerCase())
     })
 
+    let filteringFlowers = [];
+
+    if (cheepFilter) {
+        filteringFlowers = searchingFlowers.sort((product1, product2) => product1["price"] > product2["price"] ? 1 : -1)
+    } else {
+        filteringFlowers = searchingFlowers.sort((product1, product2) => product1["price"] < product2["price"] ? 1 : -1)
+
+    }
+
     return (
         <div className='shop'>
-            {searchingFlowers.map(item => {
+            {filteringFlowers.map(item => {
                 const { id, ...itemProps } = item;
                 return <Card key={id} {...itemProps} />
             })}

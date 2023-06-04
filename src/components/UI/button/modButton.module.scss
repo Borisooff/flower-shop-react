@@ -1,0 +1,10 @@
+.modButton {
+    background: #FF8F52;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 22px;
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.03);
+    }
+  }

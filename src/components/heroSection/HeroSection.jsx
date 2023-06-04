@@ -1,6 +1,8 @@
 import React from 'react';
 import './heroSection.scss'
 
+import ModButton from '../UI/button/ModButton';
+
 const HeroSection = () => {
     return (
         <section className="hero">
@@ -12,7 +14,7 @@ const HeroSection = () => {
                 <div className="hero__subtitle">
                     Browse between hundred of flowers
                 </div>
-                <button className="hero__btn btn">Browse</button>
+                <ModButton className="hero__btn btn">Browse</ModButton>
             </div>
             <div className="hero__grid">
                 <img src="/assets/hero/1.jpg" alt="flower" />

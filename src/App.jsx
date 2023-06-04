@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-
 import AppFooter from "./components/appFooter/AppFooter";
 import AppHeader from "./components/appHeader/AppHeader";
 import Spinner from "./components/spinner/Spinner";

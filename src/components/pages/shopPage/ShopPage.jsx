@@ -8,16 +8,21 @@ import './shopPage.scss'
 const ShopPage = () => {
 
     const [search, setSearch] = useState('');
+    const [cheep, setCheep] = useState(true);
 
     const onSearchChange = (text) => {
         setSearch(text)
     }
 
+    const updateCheepFilter = (filter) => {
+        setCheep(filter)
+    }
+
     return (
         <div className='container'>
             <div className="shopPage">
-                <SearchPanel onSearchChange={onSearchChange} />
-                <ShopList search={search} />
+                <SearchPanel updateCheepFilter={updateCheepFilter} onSearchChange={onSearchChange} />
+                <ShopList cheepFilter={cheep} search={search} />
             </div>
         </div>
     );
