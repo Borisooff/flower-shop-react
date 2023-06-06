@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import Modal from '../UI/modal/Modal';
 import Switch from '../UI/switch/Switch';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -9,7 +8,7 @@ import useShopService from '../../services/shopService';
 
 import './filter.scss';
 
-const Filter = ({ active, setActive }) => {
+const Filter = () => {
 
     const [filters, setFilters] = useState([]);
 
@@ -21,7 +20,7 @@ const Filter = ({ active, setActive }) => {
     }, []);
 
     return (
-        <form>
+        <form className='filter'>
             <div className="filter__title">Filtering</div>
             {filters.map(filter => {
                 return (

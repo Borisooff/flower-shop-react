@@ -5,10 +5,10 @@ import AppFooter from "./components/appFooter/AppFooter";
 import AppHeader from "./components/appHeader/AppHeader";
 import Spinner from "./components/spinner/Spinner";
 
-const MainPage = lazy(()=> import('./components/pages/mainPage/MainPage'))
-const ShopPage = lazy(()=> import('./components/pages/shopPage/ShopPage'))
-const BlogPage = lazy(()=> import('./components/pages/BlogPage'))
-const AboutPage = lazy(()=> import('./components/pages/AboutPage'))
+const MainPage = lazy(()=> import('./components/pages/mainPage/MainPage'));
+const ShopPage = lazy(()=> import('./components/pages/shopPage/ShopPage'));
+const BlogPage = lazy(()=> import('./components/pages/BlogPage'));
+const AboutPage = lazy(()=> import('./components/pages/AboutPage'));
 
 function App() {
   return (
