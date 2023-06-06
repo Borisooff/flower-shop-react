@@ -21,23 +21,16 @@ const Filter = ({ active, setActive }) => {
     }, []);
 
     return (
-        <Modal active={active} setActive={setActive}>
-            <form className={active ? 'filter active' : 'filter'}
-                onClick={e => e.stopPropagation()}>
-                <div className="filter__close"
-                    onClick={() => setActive(false)}>
-                    <img src="./assets/shop/close-icon.svg" alt="close" />
-                </div>
-                <div className="filter__title">Filtering</div>
-                {filters.map(filter => {
-                    return (
-                        <Switch key={filter} filter={filter} />
-                    )
-                })}
-                {error ? <ErrorMessage /> : null}
-                {loading ? <Spinner /> : null}
-            </form>
-        </Modal>
+        <form>
+            <div className="filter__title">Filtering</div>
+            {filters.map(filter => {
+                return (
+                    <Switch key={filter} filter={filter} />
+                )
+            })}
+            {error ? <ErrorMessage /> : null}
+            {loading ? <Spinner /> : null}
+        </form>
     );
 }
 

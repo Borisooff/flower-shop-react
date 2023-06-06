@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+
 import Filter from '../filter/Filter';
 import ModInput from '../UI/input/ModInput';
+import Modal from '../UI/modal/Modal';
 
 import './searchPanel.scss';
 
@@ -19,7 +21,9 @@ const SearchPanel = ({ onSearchChange, updateCheepFilter }) => {
         <div className='panel'>
             <button onClick={() => setFilterOpen(!filterOpen)}
                 className='panel__filter__btn'>Filtering</button>
-            <Filter active={filterOpen} setActive={setFilterOpen} />
+            <Modal active={filterOpen} setActive={setFilterOpen}>
+                <Filter />
+            </Modal>
             <form className='search'>
                 <ModInput
                     value={search}
