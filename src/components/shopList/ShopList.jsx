@@ -34,14 +34,16 @@ const ShopList = ({ search, cheepFilter }) => {
     }
 
     return (
-        <div className='shop'>
-            {filteringFlowers.map(item => {
-                const { id, ...itemProps } = item;
-                return <Card key={id} {...itemProps} />
-            })}
+        <>
+            <div className='shop'>
+                {filteringFlowers.map(item => {
+                    const { id, ...itemProps } = item;
+                    return <Card key={id} {...itemProps} />
+                })}
+                {error ? <ErrorMessage /> : null}
+            </div>
             {loading ? <Spinner /> : null}
-            {error ? <ErrorMessage /> : null}
-        </div>
+        </>
     );
 }
 

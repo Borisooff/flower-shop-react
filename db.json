@@ -55,6 +55,111 @@
       "price": 3,
       "id": 9,
       "sales": 30
+    },
+    {
+      "title": "Lily",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 8.49,
+      "id": "lily001",
+      "sales": 0
+    },
+    {
+      "title": "Carnation",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 6.49,
+      "id": "carnation001",
+      "sales": 0
+    },
+    {
+      "title": "Orchid",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 12.99,
+      "id": "orchid001",
+      "sales": 0
+    },
+    {
+      "title": "Lavender",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 3.99,
+      "id": "lavender001",
+      "sales": 0
+    },
+    {
+      "title": "Crocus",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 2.99,
+      "id": "crocus001",
+      "sales": 0
+    },
+    {
+      "title": "Hydrangea",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 11.49,
+      "id": "hydrangea001",
+      "sales": 0
+    },
+    {
+      "title": "Iris",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 6.99,
+      "id": "iris001",
+      "sales": 0
+    },
+    {
+      "title": "Gerbera",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 7.49,
+      "id": "gerbera001",
+      "sales": 0
+    },
+    {
+      "title": "Cactus",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 5.49,
+      "id": "cactus001",
+      "sales": 0
+    },
+    {
+      "title": "Chrysanthemum",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 8.99,
+      "id": "chrysanthemum001",
+      "sales": 0
+    },
+    {
+      "title": "Geranium",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 6.99,
+      "id": "geranium001",
+      "sales": 0
+    },
+    {
+      "title": "Daffodil",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 4.99,
+      "id": "daffodil001",
+      "sales": 0
+    },
+    {
+      "title": "Anemone",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 7.49,
+      "id": "anemone001",
+      "sales": 0
+    },
+    {
+      "title": "Snapdragon",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 5.99,
+      "id": "snapdragon001",
+      "sales": 0
+    },
+    {
+      "title": "Poppy",
+      "url": "/assets/cards/Daisy.jpg",
+      "price": 8.99,
+      "id": "poppy001",
+      "sales": 0
     }
   ],
   

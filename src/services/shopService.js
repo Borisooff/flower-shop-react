@@ -4,7 +4,7 @@ const useShopService = () => {
     const { loading, error, request, clearError } = useHttp();
 
     const getAllProducts = async () => {
-        const res = await request('http://localhost:3000/products');
+        const res = await request('http://localhost:3000/product');
         return res;
     }
 

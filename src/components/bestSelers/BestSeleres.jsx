@@ -26,9 +26,9 @@ const BestSeleres = () => {
                     const { id, ...itemProps } = item;
                     return <Card key={id} {...itemProps} />
                 })}
-                {loading ? <Spinner /> : null}
                 {error ? <ErrorMessage /> : null}
             </div>
+            {loading ? <Spinner /> : null}
         </section>
     );
 }
