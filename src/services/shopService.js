@@ -6,7 +6,6 @@ const useShopService = () => {
     const getAllProducts = async () => {
         const res = await request('http://localhost:3000/products');
         return res;
-
     }
 
     const getBestSelers = async (offset = 4) => {
@@ -15,7 +14,12 @@ const useShopService = () => {
         return sorted.slice(0, offset);
     }
 
-    return { loading, error, request, clearError, getBestSelers, getAllProducts }
+    const getAllFilters = async () => {
+        const res = await request('http://localhost:3000/filters');
+        return res;
+    }
+
+    return { loading, error, request, clearError, getBestSelers, getAllProducts, getAllFilters }
 }
 
 export default useShopService;

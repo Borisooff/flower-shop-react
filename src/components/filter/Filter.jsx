@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import Modal from '../UI/modal/Modal';
 import Switch from '../UI/switch/Switch';
+import Spinner from '../spinner/Spinner';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
-import './filter.scss'
+import useShopService from '../../services/shopService';
+
+import './filter.scss';
 
 const Filter = ({ active, setActive }) => {
 
-    const filterData = [
-        'Rose', 'Tulip', 'Gifts', 'Bouquets'
-    ]
+    const [filters, setFilters] = useState([]);
+
+    const { loading, error, getAllFilters } = useShopService();
+
+    useEffect(() => {
+        getAllFilters()
+            .then(res => setFilters(res))
+    }, []);
 
     return (
         <Modal active={active} setActive={setActive}>
@@ -19,11 +29,13 @@ const Filter = ({ active, setActive }) => {
                     <img src="./assets/shop/close-icon.svg" alt="close" />
                 </div>
                 <div className="filter__title">Filtering</div>
-                {filterData.map(filter => {
+                {filters.map(filter => {
                     return (
-                        <Switch filter={filter}/>
+                        <Switch key={filter} filter={filter} />
                     )
                 })}
+                {error ? <ErrorMessage /> : null}
+                {loading ? <Spinner /> : null}
             </form>
         </Modal>
     );
