@@ -42,3 +42,10 @@ export const changeFilter = (filter) => {
         payload: filter
     }
 }
+
+export const changeSearch = (search) => {
+    return {
+        type: 'SEARCH_CHANGED',
+        payload: search
+    }
+}

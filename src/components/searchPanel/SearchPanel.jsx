@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeSearch } from '../../actions';
 
 import Filter from '../filter/Filter';
 import ModInput from '../UI/input/ModInput';
@@ -6,12 +8,11 @@ import Modal from '../UI/modal/Modal';
 
 import './searchPanel.scss';
 
-const SearchPanel = ({ onSearchChange, updateCheepFilter }) => {
-    const [search, setSearch] = useState('');
+const SearchPanel = ({ updateCheepFilter }) => {
+    const { search } = useSelector(state => state);
+    const dispatch = useDispatch();
     const [filterOpen, setFilterOpen] = useState(false);
     const [cheep, setCheep] = useState(true);
-
-    onSearchChange(search);
 
     useEffect(() => {
         updateCheepFilter(cheep)
@@ -19,7 +20,7 @@ const SearchPanel = ({ onSearchChange, updateCheepFilter }) => {
 
     const onInputClear = (event) => {
         event.preventDefault();
-        setSearch('');
+        dispatch(changeSearch(''))
     }
 
     return (
@@ -33,7 +34,7 @@ const SearchPanel = ({ onSearchChange, updateCheepFilter }) => {
                 <ModInput
                     onSubmit={event => event.preventDefault()}
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => dispatch(changeSearch((e.target.value)))}
                     placeholder='Search....' />
                 <div className='search__btn'>
                     {search === '' ?

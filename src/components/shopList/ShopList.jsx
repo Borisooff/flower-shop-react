@@ -9,8 +9,8 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './shopList.scss';
 
-const ShopList = ({ search, cheepFilter }) => {
-    const { filteredProducts, productsLoadingStatus } = useSelector(state => state);
+const ShopList = ({ cheepFilter }) => {
+    const { searchedProducts, productsLoadingStatus } = useSelector(state => state);
     const dispatch = useDispatch();
     const { getAllProducts } = useShopService();
 
@@ -25,23 +25,17 @@ const ShopList = ({ search, cheepFilter }) => {
             .catch(() => dispatch(productsFetchingError()))
     }
 
-    // const searchingFlowers = flowersList.filter(item => {
-    //     return item.title.toLowerCase().includes(search.toLowerCase())
-    // })
-
-    // let filteringFlowers = [];
-
-    // if (cheepFilter) {
-    //     filteringFlowers = searchingFlowers.sort((product1, product2) => product1["price"] > product2["price"] ? 1 : -1)
-    // } else {
-    //     filteringFlowers = searchingFlowers.sort((product1, product2) => product1["price"] < product2["price"] ? 1 : -1)
-
-    // }
+    let filteringFlowers = [];
+        if (cheepFilter) {
+            filteringFlowers = searchedProducts.sort((product1, product2) => product1["price"] > product2["price"] ? 1 : -1)
+        } else {
+            filteringFlowers = searchedProducts.sort((product1, product2) => product1["price"] < product2["price"] ? 1 : -1)
+        }
 
     return (
         <>
             <div className='shop'>
-                {filteredProducts.map(item => {
+                {filteringFlowers.map(item => {
                     const { id, ...itemProps } = item;
                     return <Card key={id} {...itemProps} />
                 })}
