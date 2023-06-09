@@ -54,16 +54,16 @@ body {
       top: 50%;
       transform: translateY(-50%);
       background-color: #969696;
-      width: 165px;
+      width: 30%;
       height: 1px;
       border-radius: 2px;
   }
 
   &::before {
-      left: 325px;
+      left: 10%;
   }
 
   &::after {
-      right: 325px;
+      right: 10%;
   }
 }

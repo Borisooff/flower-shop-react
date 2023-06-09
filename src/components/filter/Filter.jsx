@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { filtersFetched, filtersFetching, filtersFetchingError, changeFilter } from '../../actions';
 
 import Switch from '../UI/switch/Switch';
 import Spinner from '../spinner/Spinner';
@@ -9,26 +11,27 @@ import useShopService from '../../services/shopService';
 import './filter.scss';
 
 const Filter = () => {
-
-    const [filters, setFilters] = useState([]);
-
-    const { loading, error, getAllFilters } = useShopService();
+    const { filters, filtersLoadingstatus, activeFilter } = useSelector(state => state);
+    const dispatch = useDispatch();
+    const { getAllFilters } = useShopService();
 
     useEffect(() => {
+        dispatch(filtersFetching())
         getAllFilters()
-            .then(res => setFilters(res))
+            .then(res => dispatch(filtersFetched(res)))
+            .catch(() => dispatch(filtersFetchingError()))
     }, []);
 
     return (
         <form className='filter'>
             <div className="filter__title">Filtering</div>
-            {filters.map(filter => {
+            {filters.map(({ name, label }) => {
                 return (
-                    <Switch key={filter} filter={filter} />
+                    <Switch onClick={() => dispatch(changeFilter(name))} checked={name === activeFilter} label={label} key={name} filter={name} />
                 )
             })}
-            {error ? <ErrorMessage /> : null}
-            {loading ? <Spinner /> : null}
+            {filtersLoadingstatus === 'error' ? <ErrorMessage /> : null}
+            {filtersLoadingstatus === 'loading' ? <Spinner /> : null}
         </form>
     );
 }

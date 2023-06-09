@@ -7,8 +7,9 @@ import Spinner from "./components/spinner/Spinner";
 
 const MainPage = lazy(()=> import('./components/pages/mainPage/MainPage'));
 const ShopPage = lazy(()=> import('./components/pages/shopPage/ShopPage'));
-const BlogPage = lazy(()=> import('./components/pages/BlogPage'));
-const AboutPage = lazy(()=> import('./components/pages/AboutPage'));
+const BlogPage = lazy(()=> import('./components/pages/blogPage/BlogPage'));
+const AboutPage = lazy(()=> import('./components/pages/aboutPage/AboutPage'));
+const Page404 = lazy(()=> import('./components/pages/page404/Page404'));
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/shop' element={<ShopPage />}/>
             <Route path='/blog' element={<BlogPage />}/>
             <Route path='/about' element={<AboutPage />}/>
+            <Route path='*' element={<Page404 />} />
           </Routes>
         </Suspense>
       </main>

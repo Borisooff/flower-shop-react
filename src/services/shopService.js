@@ -4,7 +4,7 @@ const useShopService = () => {
     const { loading, error, request, clearError } = useHttp();
 
     const getAllProducts = async () => {
-        const res = await request('http://localhost:3000/products');
+        const res = await request('http://localhost:3001/products');
         return res;
     }
 
@@ -15,7 +15,7 @@ const useShopService = () => {
     }
 
     const getAllFilters = async () => {
-        const res = await request('http://localhost:3000/filters');
+        const res = await request('http://localhost:3001/filters');
         return res;
     }
 

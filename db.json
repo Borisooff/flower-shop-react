@@ -5,168 +5,206 @@
       "url": "/assets/cards/Daisy.jpg",
       "price": 3,
       "id": 1,
-      "sales": 5
+      "sales": 5,
+      "category": ""
     },
     {
       "title": "Periwinkle",
       "url": "/assets/cards/Periwinkle.jpg",
       "price": 4,
       "id": 2,
-      "sales": 10
+      "sales": 10,
+      "category": ""
     },
     {
       "title": "Sun flower",
       "url": "/assets/cards/Sun-flower.jpg",
       "price": 5,
       "id": 4,
-      "sales": 8
+      "sales": 8,
+      "category": ""
     },
     {
       "title": "White rose",
       "url": "/assets/cards/White-rosejpg.jpg",
       "price": 10,
       "id": 5,
-      "sales": 19
+      "sales": 19,
+      "category": "rose"
     },
     {
       "title": "Red rose",
       "url": "/assets/cards/Red-rose.jpg",
       "price": 7,
       "id": 6,
-      "sales": 37
+      "sales": 37,
+      "category": "rose"
     },
     {
       "title": "Orchid",
       "url": "/assets/cards/Orchid.jpg",
       "price": 20,
       "id": 7,
-      "sales": 8
+      "sales": 8,
+      "category": ""
     },
     {
       "title": "Peony",
       "url": "/assets/cards/Peony.jpg",
       "price": 8,
       "id": 8,
-      "sales": 14
+      "sales": 14,
+      "category": ""
     },
     {
       "title": "Tulip",
       "url": "/assets/cards/Tulip.jpg",
       "price": 3,
       "id": 9,
-      "sales": 30
+      "sales": 30,
+      "category": "tulip"
     },
     {
       "title": "Lily",
       "url": "/assets/cards/Daisy.jpg",
       "price": 8.49,
       "id": "lily001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Carnation",
       "url": "/assets/cards/Daisy.jpg",
       "price": 6.49,
       "id": "carnation001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Orchid",
       "url": "/assets/cards/Daisy.jpg",
       "price": 12.99,
       "id": "orchid001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Lavender",
       "url": "/assets/cards/Daisy.jpg",
       "price": 3.99,
       "id": "lavender001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Crocus",
       "url": "/assets/cards/Daisy.jpg",
       "price": 2.99,
       "id": "crocus001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Hydrangea",
       "url": "/assets/cards/Daisy.jpg",
       "price": 11.49,
       "id": "hydrangea001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Iris",
       "url": "/assets/cards/Daisy.jpg",
       "price": 6.99,
       "id": "iris001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Gerbera",
       "url": "/assets/cards/Daisy.jpg",
       "price": 7.49,
       "id": "gerbera001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Cactus",
       "url": "/assets/cards/Daisy.jpg",
       "price": 5.49,
       "id": "cactus001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Chrysanthemum",
       "url": "/assets/cards/Daisy.jpg",
       "price": 8.99,
       "id": "chrysanthemum001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Geranium",
       "url": "/assets/cards/Daisy.jpg",
       "price": 6.99,
       "id": "geranium001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Daffodil",
       "url": "/assets/cards/Daisy.jpg",
       "price": 4.99,
       "id": "daffodil001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Anemone",
       "url": "/assets/cards/Daisy.jpg",
       "price": 7.49,
       "id": "anemone001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Snapdragon",
       "url": "/assets/cards/Daisy.jpg",
       "price": 5.99,
       "id": "snapdragon001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     },
     {
       "title": "Poppy",
       "url": "/assets/cards/Daisy.jpg",
       "price": 8.99,
       "id": "poppy001",
-      "sales": 0
+      "sales": 0,
+      "category": ""
     }
   ],
-  
   "filters": [
-    "Rose" , 
-    "Tulip", 
-    "Gifts", 
-    "Bouquets"
+    {
+      "name": "rose",
+      "label": "Rose"
+    },
+    {
+      "name": "tulip",
+      "label": "Tulip"
+    },
+    {
+      "name": "gifts",
+      "label": "Gifts"
+    },
+    {
+      "name": "bouquets",
+      "label": "Bouquets"
+    },
+    {
+      "name": "all",
+      "label": "All"
+    }
   ]
 }

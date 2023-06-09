@@ -1,0 +1,32 @@
+.page404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+
+    &__errorMessage {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+
+        img {
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        color: #333333;
+        position: relative;
+        text-decoration: underline;
+
+        &::before {
+            content: '';
+            position:absolute;
+            width: 20px;
+            height: 20px;
+            right: 135px;
+            background: url('../../../../public/assets/error/back.svg');
+        }
+    }
+}
