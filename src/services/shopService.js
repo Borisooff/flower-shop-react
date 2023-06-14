@@ -1,7 +1,7 @@
 import { useHttp } from "../hooks/http.hook";
 
 const useShopService = () => {
-    const { loading, error, request, clearError } = useHttp();
+    const { request } = useHttp();
 
     const getAllProducts = async () => {
         const res = await request('http://localhost:3001/products');
@@ -19,7 +19,7 @@ const useShopService = () => {
         return res;
     }
 
-    return { loading, error, request, clearError, getBestSelers, getAllProducts, getAllFilters }
+    return {  request, getBestSelers, getAllProducts, getAllFilters }
 }
 
 export default useShopService;

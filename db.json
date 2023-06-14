@@ -183,6 +183,54 @@
       "id": "poppy001",
       "sales": 0,
       "category": ""
+    },
+    {
+      "title": "Classic Red Roses Bouquet",
+      "url": "/assets/cards/RedRosebuquet.jpg",
+      "price": 49.99,
+      "id": "bouquet001",
+      "sales": 0,
+      "category": "bouquets"
+    },
+    {
+      "title": "Spring Mixed Flower Bouquet",
+      "url": "/assets/cards/peonyBouquet.jpg",
+      "price": 39.99,
+      "id": "bouquet002",
+      "sales": 0,
+      "category": "bouquets"
+    },
+    {
+      "title": "Romantic Pink Peony Bouquet",
+      "url": "/assets/cards/RedRosebuquet.jpg",
+      "price": 59.99,
+      "id": "bouquet003",
+      "sales": 0,
+      "category": "bouquets"
+    },
+    {
+      "title": "Sunflower and Daisy Bouquet",
+      "url": "/assets/cards/RedRosebuquet.jpg",
+      "price": 29.99,
+      "id": "bouquet004",
+      "sales": 0,
+      "category": "bouquets"
+    },
+    {
+      "title": "Tropical Paradise Bouquet",
+      "url": "/assets/cards/RedRosebuquet.jpg",
+      "price": 79.99,
+      "id": "bouquet005",
+      "sales": 0,
+      "category": "bouquets"
+    },
+    {
+      "title": "Teddy Bear",
+      "url": "/assets/cards/bear.jpg",
+      "price": 81.99,
+      "id": "gift00032",
+      "sales": 0,
+      "category": "gifts"
     }
   ],
   "filters": [

@@ -3,7 +3,6 @@
     border-radius: 5px;
     overflow: hidden;
     padding: 15px 17px;
-    // margin-right: 10px;
 
     &:last-child {
         margin-right: 0px;
@@ -11,13 +10,17 @@
 
     &__imgbox {
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         max-width: 251px;
         max-height: 230px;
         margin-bottom: 9px;
 
         img {
-            width: 100%;
+            min-width: 100%;
+            flex-shrink: 0;
             object-fit: cover;
         }
     }
