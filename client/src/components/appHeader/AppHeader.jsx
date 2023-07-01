@@ -2,13 +2,14 @@ import { Link, NavLink } from 'react-router-dom';
 import React from 'react';
 
 import './appHeader.scss'
+import { ABOUT_ROUTE, BLOG_ROUTE, CART_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, SHOP_ROUTE } from '../../utils/consts';
 
 const AppHeader = () => {
   return (
     <header className='header'>
       <div className="container">
         <div className="header__inner">
-          <Link to='/' className="header__imgbox">
+          <Link to={MAIN_ROUTE} className="header__imgbox">
             <img src="/assets/header/logo-header.svg" alt="flower shop" />
           </Link>
           <nav className='header__nav'>
@@ -16,27 +17,27 @@ const AppHeader = () => {
               className='header__nav__link'
               end
               style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
-              to="/">Home</NavLink>
+              to={MAIN_ROUTE}>Home</NavLink>
             <NavLink
               className='header__nav__link'
               style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
-              to="/shop">Shop</NavLink>
+              to={SHOP_ROUTE}>Shop</NavLink>
             <NavLink
               className='header__nav__link'
               style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
-              to="/blog">Blog</NavLink>
+              to={BLOG_ROUTE}>Blog</NavLink>
             <NavLink
               className='header__nav__link'
               style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
-              to="/about">About</NavLink>
+              to={ABOUT_ROUTE}>About</NavLink>
           </nav>
           <div className='header__user-nav'>
-            <a className="header__nav__item">
+            <NavLink to={LOGIN_ROUTE} className="header__nav__item">
               <img src="/assets/header/prof.svg" alt="profile" />
-            </a>
-            <a className="header__nav__item">
+            </NavLink>
+            <NavLink to={CART_ROUTE} className="header__nav__item">
               <img src="/assets/header/cart.svg" alt="cart" />
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

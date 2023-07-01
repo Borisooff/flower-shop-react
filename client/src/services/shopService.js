@@ -1,10 +1,13 @@
+// import { useSelector } from "react-redux";
 import { useHttp } from "../hooks/http.hook";
+
 
 const useShopService = () => {
     const { request } = useHttp();
 
     const getAllProducts = async () => {
-        const res = await request('http://localhost:3001/products');
+        // const {activeFilter} = useSelector(state => state.filter)
+        const res = await request('http://localhost:5000/api/product', 'GET', {categoryId: 1});
         return res;
     }
 
@@ -15,7 +18,7 @@ const useShopService = () => {
     }
 
     const getAllFilters = async () => {
-        const res = await request('http://localhost:3001/filters');
+        const res = await request('http://localhost:5000/api/category');
         return res;
     }
 

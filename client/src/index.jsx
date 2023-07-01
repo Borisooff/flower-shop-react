@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import store from './store';
 
-import './index.scss';
+import './style/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +13,6 @@ root.render(
         <Provider store={store}>
             <App />
         </Provider>
-    // {/* </StrictMode> */}
+    // </StrictMode>
 );
 

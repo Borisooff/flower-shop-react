@@ -27,17 +27,16 @@ class ProductController {
         } catch (e) {
             next(ApiError.badRequest(e.message))
         }
-
     }
 
     async getAll(req, res) {
-        let {category, limit, page} = req.query;
+        let {categoryId, limit, page} = req.query;
         page = page || 1;
         limit = limit || 12;
         let offset = page * limit - limit;
         let products;
-        if(category){
-            products = await Product.findAndCountAll({where:{category}, limit, offset})
+        if(categoryId){
+            products = await Product.findAndCountAll({where:{categoryId}, limit, offset})
         } else {
             products = await Product.findAndCountAll({limit, offset})
         }
@@ -55,6 +54,5 @@ class ProductController {
         return res.json(product)
     }
 }
-
 
 module.exports = new ProductController()

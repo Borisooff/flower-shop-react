@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../card/Card';
-import useShopService from '../../services/shopService';
+import useProductsService from '../../services/useProductsService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
@@ -10,7 +10,7 @@ const BestSeleres = () => {
 
     const [bestSelers, setBestSelers] = useState([]);
 
-    const { loading, error, getBestSelers } = useShopService();
+    const { getBestSelers } = useProductsService();
 
     useEffect(() => {
         getBestSelers(4)
@@ -26,9 +26,9 @@ const BestSeleres = () => {
                     const { id, ...itemProps } = item;
                     return <Card key={id} {...itemProps} />
                 })}
-                {error ? <ErrorMessage /> : null}
+                {/* {error ? <ErrorMessage /> : null} */}
             </div>
-            {loading ? <Spinner /> : null}
+            {/* {loading ? <Spinner /> : null} */}
         </section>
     );
 }

@@ -1,16 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import useShopService from "../../services/shopService";
-
+import useCategoriesService from '../../services/useCategoriesService';
 const initialState = {
     filters: [],
-    activeFilter: 'all',
+    activeFilter: null,
     filtersLoadingStatus: 'idle',
 }
 
 export const fetchFilters = createAsyncThunk(
     'filters/fetchFilters',
     async () => {
-        const { getAllFilters } = useShopService();
+        const { getAllFilters } = useCategoriesService();
         return await getAllFilters();
     }
 );

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../../heroSection/HeroSection';
-import BestSeleres from '../../bestSelers/BestSeleres';
+import HeroSection from '../../components/heroSection/HeroSection';
+import BestSeleres from '../../components/bestSelers/BestSeleres';
 
 const MainPage = () => {
     return (

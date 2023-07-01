@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ShopList from '../../shopList/ShopList';
-import SearchPanel from '../../searchPanel/SearchPanel';
+import ShopList from '../../components/shopList/ShopList';
+import SearchPanel from '../../components/searchPanel/SearchPanel';
 
 import './shopPage.scss'
 

@@ -2,11 +2,11 @@ import React from 'react';
 
 import './card.scss';
 
-const Card = ({url, title, price}) => {
+const Card = ({img, title, price}) => {
     return (
         <div className='card'>
             <div className="card__imgbox">
-                <img src={url} alt={title} />
+                <img src={'http://localhost:5000/' + img} alt={title} />
             </div>
             <div className="card__title">{title}</div>
             <div className="card__content">

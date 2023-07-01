@@ -19,11 +19,12 @@ const Filter = () => {
     return (
         <form className='filter'>
             <div className="filter__title">Filtering</div>
-            {filters.map(({ name, label }) => {
+            {filters.map(({name, id}) => {
                 return (
-                    <Switch onClick={() => dispatch(activeFilterChanged(name))} checked={name === activeFilter} label={label} key={name} filter={name} />
+                    <Switch onClick={() => dispatch(activeFilterChanged(id))} checked={id === activeFilter} label={name} key={name} filter={name} />
                 )
             })}
+            <Switch onClick={() => dispatch(activeFilterChanged(null))} checked={activeFilter === null} label='All' key='all' filter={null} />
             {filtersLoadingstatus === 'error' ? <ErrorMessage /> : null}
             {filtersLoadingstatus === 'loading' ? <Spinner /> : null}
         </form>
