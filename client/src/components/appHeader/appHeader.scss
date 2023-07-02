@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .header {
     background-color: #fff;
 
@@ -38,5 +40,11 @@
                 transform: scale(1.1)
             }
         }
+    }
+    &__user__nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary;
     }
 }

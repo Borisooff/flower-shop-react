@@ -58,7 +58,7 @@ const LoginForm = () => {
             <div>{errors?.password && <p>{errors?.password?.message || 'error'}</p>}</div>
             <div>{submitError}</div>
             <ModButton primary={true} type='submit'>
-                Войти
+                Log in
             </ModButton>
         </form>
      );

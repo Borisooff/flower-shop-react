@@ -4,7 +4,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 import useProductsService from '../../services/useProductsService';
 
-import Card from '../card/Card';
+import ProductCard from '../productCard/ProductCard';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
@@ -51,7 +51,7 @@ const ShopList = () => {
             <div className='shop'>
                 {sortedProducts.map(item => {
                     const { id, ...itemProps } = item;
-                    return <Card key={id} {...itemProps} />
+                    return <ProductCard key={id} {...itemProps} />
                 })}
                 {productsLoadingStatus === 'error' ? <ErrorMessage /> : null}
             </div>

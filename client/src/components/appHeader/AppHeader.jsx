@@ -1,10 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
-import React from 'react';
+import { useSelector } from 'react-redux';
+
+import { ABOUT_ROUTE, ADMIN_ROUTE, BLOG_ROUTE, CART_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, SHOP_ROUTE } from '../../utils/consts';
 
 import './appHeader.scss'
-import { ABOUT_ROUTE, BLOG_ROUTE, CART_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, SHOP_ROUTE } from '../../utils/consts';
 
 const AppHeader = () => {
+  const { isAuth } = useSelector(state => state.user);
+  const { email, role } = useSelector(state => state.user.user);
+
   return (
     <header className='header'>
       <div className="container">
@@ -16,25 +20,37 @@ const AppHeader = () => {
             <NavLink
               className='header__nav__link'
               end
-              style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
+              style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={MAIN_ROUTE}>Home</NavLink>
             <NavLink
               className='header__nav__link'
-              style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
+              style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={SHOP_ROUTE}>Shop</NavLink>
             <NavLink
               className='header__nav__link'
-              style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
+              style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={BLOG_ROUTE}>Blog</NavLink>
             <NavLink
               className='header__nav__link'
-              style={({isActive}) => ({color: isActive ? '#FF8F52' : 'inherit'}) }
+              style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={ABOUT_ROUTE}>About</NavLink>
           </nav>
-          <div className='header__user-nav'>
-            <NavLink to={LOGIN_ROUTE} className="header__nav__item">
-              <img src="/assets/header/prof.svg" alt="profile" />
-            </NavLink>
+          <div className='header__user__nav'>
+            {
+              role === 'ADMIN' ?
+                <NavLink to={ADMIN_ROUTE} className="header__nav__item">
+                  Admin panel
+                </NavLink> :
+                null
+            }
+            {
+              isAuth ?
+                <span className="header__nav__item">{email}</span>
+                :
+                <NavLink to={LOGIN_ROUTE} className="header__nav__item">
+                  <img src="/assets/header/prof.svg" alt="profile" />
+                </NavLink>
+            }
             <NavLink to={CART_ROUTE} className="header__nav__item">
               <img src="/assets/header/cart.svg" alt="cart" />
             </NavLink>

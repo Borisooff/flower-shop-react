@@ -6,8 +6,7 @@ import { authRoutes, publicRoutes } from './routes';
 import Spinner from "./components/spinner/Spinner";
 
 const AppRouter = () => {
-    // const { isAuth } = useSelector(state => state.user)
-    const isAuth = false;
+    const { isAuth } = useSelector(state => state.user)
 
     return (
         <Suspense fallback={<Spinner />}>

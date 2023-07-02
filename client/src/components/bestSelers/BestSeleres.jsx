@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../card/Card';
+import ProductCard from '../productCard/ProductCard';
 import useProductsService from '../../services/useProductsService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -24,7 +24,7 @@ const BestSeleres = () => {
             <div className="bestSelers__inner">
                 {bestSelers.map(item => {
                     const { id, ...itemProps } = item;
-                    return <Card key={id} {...itemProps} />
+                    return <ProductCard key={id} {...itemProps} />
                 })}
                 {/* {error ? <ErrorMessage /> : null} */}
             </div>

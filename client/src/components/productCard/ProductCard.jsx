@@ -1,10 +1,12 @@
 import React from 'react';
 
-import './card.scss';
+import Card from '../UI/card/Card';
 
-const Card = ({img, title, price}) => {
+import './productCard.scss';
+
+const ProductCard = ({img, title, price}) => {
     return (
-        <div className='card'>
+        <Card>
             <div className="card__imgbox">
                 <img src={'http://localhost:5000/' + img} alt={title} />
             </div>
@@ -13,8 +15,8 @@ const Card = ({img, title, price}) => {
                 <div className="card__price">{price}$</div>
                 <div className="card__cart">Add to cart</div>
             </div>
-        </div>
+        </Card>
     );
 }
 
-export default Card;
+export default ProductCard;
