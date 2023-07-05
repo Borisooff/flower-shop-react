@@ -65,6 +65,7 @@ const RegisterForm = () => {
                 type='password'
                 tabIndex='2'
                 placeholder='password...' />
+                <div>{errors?.password && <p>{errors?.password?.message || 'error'}</p>}</div>
             <input
                 {...register('repeatPassword', {
                     required: 'field must be filled in'
@@ -72,7 +73,7 @@ const RegisterForm = () => {
                 type='password'
                 tabIndex='3'
                 placeholder='repeat password...' />
-            <div>{errors?.password && <p>{errors?.password?.message || 'error'}</p>}</div>
+            <div>{errors?.repeatPassword && <p>{errors?.repeatPassword?.message || 'error'}</p>}</div>
             <div>{submitError}</div>
             <ModButton>
                 Register

@@ -1,7 +1,7 @@
 import {$authHost, $host} from "./index";
 
 export const createCategory = async (category) => {
-    const {data} = await $authHost.post('api/type', category)
+    const {data} = await $authHost.post('api/category', {name: category})
     return data
 }
 
