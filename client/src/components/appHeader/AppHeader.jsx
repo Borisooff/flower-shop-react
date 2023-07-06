@@ -34,15 +34,19 @@ const AppHeader = () => {
               className='header__nav__link'
               style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={ABOUT_ROUTE}>About</NavLink>
-          </nav>
-          <div className='header__user__nav'>
-            {
+              {
               role === 'ADMIN' ?
-                <NavLink to={ADMIN_ROUTE} className="header__nav__item">
+                <NavLink 
+                to={ADMIN_ROUTE} 
+                className="header__nav__link"
+                style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}>
                   Admin panel
                 </NavLink> :
                 null
             }
+          </nav>
+          <div className='header__user__nav'>
+            
             {
               isAuth ?
                 <span className="header__nav__item">{email}</span>
