@@ -27,7 +27,7 @@ const useProductsService = () => {
     }
 
     const getOneProduct = async (id) => {
-        const res = fetchOneProduct(id)
+        const res = await fetchOneProduct(id)
         return res
     }
 

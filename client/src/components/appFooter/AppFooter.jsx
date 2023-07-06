@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
+import { ABOUT_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, SHOP_ROUTE } from '../../utils/consts';
 
 import './appFooter.scss';
 
@@ -8,9 +11,9 @@ const AppFooter = () => {
             <div className="container">
                 <div className='footer__inner'>
                     <div className="footer__col">
-                        <a href='/' className="footer__imbox">
+                        <Link to={MAIN_ROUTE} className="footer__imbox">
                             <img src="/assets/footer/logo-footer.svg" alt="flower shop" />
-                        </a>
+                        </Link>
                         <div className="footer-discription">
                             Some random stuff about flower shop and some more info cuz this box had to get fill
                             Some random stuff about flower shop and some more info cuz this box had to get fill
@@ -19,10 +22,10 @@ const AppFooter = () => {
                     </div>
                     <div className="footer__col">
                         <div className="footer__title">Links</div>
-                        <a href="#" className="footer__link">Home</a>
-                        <a href="#" className="footer__link">Shop</a>
-                        <a href="#" className="footer__link">About</a>
-                        <a href="#" className="footer__link">Login</a>
+                        <NavLink to={MAIN_ROUTE} className="footer__link">Home</NavLink>
+                        <NavLink to={SHOP_ROUTE} className="footer__link">Shop</NavLink>
+                        <NavLink to={ABOUT_ROUTE} className="footer__link">About</NavLink>
+                        <NavLink to={LOGIN_ROUTE} className="footer__link">Login</NavLink>
                     </div>
                     <div className="footer__col">
                         <div className="footer__title">Contacts</div>

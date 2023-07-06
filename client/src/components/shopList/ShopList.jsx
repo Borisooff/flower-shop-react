@@ -12,7 +12,7 @@ import './shopList.scss';
 
 const ShopList = () => {
     const { activeFilter } = useSelector(state => state.filters)
-    const { productsLoadingStatus } = useSelector(state => state.products)
+    const { productsLoadingStatus, page } = useSelector(state => state.products)
 
     const selectSearchQuery = state => state.search.search;
     const selectPriceFilter = state => state.priceFilter.priceFilter;
@@ -44,14 +44,14 @@ const ShopList = () => {
 
     useEffect(() => {
         getAllProducts()
-    }, [activeFilter]);
+    }, [activeFilter, page]);
 
     return (
         <>
             <div className='shop'>
                 {sortedProducts.map(item => {
                     const { id, ...itemProps } = item;
-                    return <ProductCard key={id} {...itemProps} />
+                    return <ProductCard key={id} id={id} {...itemProps} />
                 })}
                 {productsLoadingStatus === 'error' ? <ErrorMessage /> : null}
             </div>

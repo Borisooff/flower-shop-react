@@ -1,0 +1,23 @@
+@import '../../style/variables.scss';
+
+.pagination {
+    &__buttonbox {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    &__button{
+        padding: 5px 10px 5px 10px;
+        background-color: #fff;
+        color: $primary;
+        border: solid 1px $primary;
+        &.active {
+            color: #fff;
+            background-color: $primary;
+            border: solid 1px #fff;
+            transform: scale(1.01)
+        }
+    }
+
+}
