@@ -4,6 +4,8 @@
     color: #fff;
     padding: 10px 22px;
     transition: all .3s;
+    display: flex;
+    align-items: center;
     &:hover{
       transform: scale(1.03);
     }

@@ -1,0 +1,39 @@
+.adminpanel {
+    margin: 30px;
+
+    &__title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    input,
+    select {
+        margin-bottom: 15px;
+        padding: 18px 29px;
+        border: 1px solid #D9D9D9;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 100%;
+        line-height: 21px;
+        color: #838383;
+    }
+
+    button {
+        margin-bottom: 15px;
+    }
+
+    &__deletebutton {
+        border-radius: 5px;
+        border: #ec5353 1px solid;
+        color: #ec5353;
+        padding: 10px 22px;
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}

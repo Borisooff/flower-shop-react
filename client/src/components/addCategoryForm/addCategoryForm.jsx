@@ -24,7 +24,7 @@ const AddCategoryForm = () => {
 
     return (
         <form onSubmit={handleSubmit(addCategory)}>
-            <label htmlFor="category">Add category for filtering</label>
+            <div className='adminpanel__title'>Add category for filtering</div>
             <input type="text"
                 name='category'
                 placeholder='Enter a category name'
