@@ -33,6 +33,14 @@ body {
   font-size: 1rem;
 }
 
+main{
+  min-height: 60vh;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

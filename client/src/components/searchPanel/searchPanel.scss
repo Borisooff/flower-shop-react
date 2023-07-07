@@ -10,6 +10,7 @@
     &__filter__btn {
         margin-left: 27px;
         position: relative;
+        transition: all .3s;
 
         &::before {
             content: '';
@@ -20,11 +21,17 @@
             height: 22px;
             background: url('../../../public/assets/shop/filtering.svg');
         }
+
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     &__price {
         position: relative;
+        min-width: 81px;
         cursor: pointer;
+        transition: all .3s;
 
         &::before {
             content: '';
@@ -34,13 +41,18 @@
             background: url('../../../public/assets/shop/price.svg');
             top: 50%;
             transform: translateY(-50%);
-            right: 66px;
+            right: 95px;
             transition: all .2s;
         }
 
+        &:hover{
+            transform: scale(1.1);
+        }
+
         &.expensive {
-            &::before{
-                transform:  translateY(-50%) rotate(180deg) translateX(20px);
+            &::before {
+                transform: translateY(-50%) rotate(180deg) translateX(20px);
+                right: 66px;
             }
         }
     }
@@ -69,7 +81,7 @@
         right: 28px;
     }
 
-    &__clear{
+    &__clear {
         cursor: pointer;
     }
 }

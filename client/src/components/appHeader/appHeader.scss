@@ -16,12 +16,17 @@
 
     &__nav {
         margin-right: 30px;
-
+        
         &__link {
             margin-right: 23px;
+            transition: all .3s;
 
             &:last-child {
                 margin-right: 0px;
+            }
+
+            &:hover {
+                transform: scale(1.1)
             }
         }
     }
@@ -39,9 +44,12 @@
             img {
                 transform: scale(1.1)
             }
+
+            transform: scale(1.1)
         }
     }
-    &__user__nav{
+
+    &__user__nav {
         display: flex;
         align-items: center;
         justify-content: center;

@@ -26,7 +26,6 @@ const Pagination = () => {
                                 <button
                                     key={pageNumber}
                                     className={btnClass}
-                                    primary={pageNumber === page}
                                     onClick={() => dispatch(pageChanged(pageNumber))}>
                                     {pageNumber}
                                 </button>
