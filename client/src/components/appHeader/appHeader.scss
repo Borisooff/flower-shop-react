@@ -16,7 +16,7 @@
 
     &__nav {
         margin-right: 30px;
-        
+
         &__link {
             margin-right: 23px;
             transition: all .3s;
@@ -26,7 +26,7 @@
             }
 
             &:hover {
-                transform: scale(1.1)
+                transform: translateY(-3px);
             }
         }
     }
@@ -42,10 +42,10 @@
 
         &:hover {
             img {
-                transform: scale(1.1)
+                transform: translateY(-3px);
             }
 
-            transform: scale(1.1)
+            transform: translateY(-3px);
         }
     }
 
@@ -56,4 +56,32 @@
         color: $primary;
         font-size: 1.3rem;
     }
+}
+
+.user__link {
+    position: relative;
+
+    &:hover .escape__modal__button {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.escape__modal__button {
+    opacity: 0;
+    pointer-events: none;
+    background-color: #fff;
+    color: #ec5353;
+    transition: all .3s;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.09);
 }

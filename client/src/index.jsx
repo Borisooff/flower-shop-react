@@ -9,10 +9,8 @@ import './style/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    // <StrictMode>
         <Provider store={store}>
             <App className='root'/>
         </Provider>
-    // </StrictMode>
 );
 

@@ -8,7 +8,7 @@ const Page404 = () => {
     <div className='page404'>
       <div className="page404__errorMessage">
         <img src="/assets/error/error-icon.svg" alt="error" />
-        You are on a page that does not exist
+        This page does not exist
       </div>
       <Link to='/'
         className="page404__link">

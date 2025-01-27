@@ -28,6 +28,7 @@ const LoginForm = () => {
             const user = await login(email, password)
             dispatch(userAuthed(true))
             dispatch(userChanged(user))
+
             navigate(MAIN_ROUTE)
         } catch (e) {
             setSubmitError(e.response.data.message)
@@ -57,7 +58,7 @@ const LoginForm = () => {
                 placeholder='password...' />
             <div>{errors?.password && <p>{errors?.password?.message || 'error'}</p>}</div>
             <div>{submitError}</div>
-            <ModButton primary={true} type='submit'>
+            <ModButton primary={'true'} type='submit'>
                 Log in
             </ModButton>
         </form>

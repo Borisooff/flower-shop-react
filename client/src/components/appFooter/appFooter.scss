@@ -34,12 +34,12 @@
     &__link {
         display: block;
         text-align: center;
-        transition:  all .3s;
+        transition:  transform .3s;
 
         &:hover {
             display: block;
             color: #fff;
-            transform: scale(1.02);
+            transform:  translateY(-3px);
         }
     }
 
@@ -62,7 +62,7 @@
         &:hover {
             display: block;
             color: #fff;
-            transform: scale(1.02);
+            transform:  translateY(-3px);
         }
 
     }

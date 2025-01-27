@@ -30,7 +30,8 @@
 
     &__rating {
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             top: 50%;
@@ -52,6 +53,6 @@
     }
 }
 
-.productpage{
+.productpage {
     margin: 30px;
 }
