@@ -12,6 +12,7 @@
     opacity: 0;
     transition: all .3s;
     pointer-events: none;
+    justify-content: center;
 
     &.active {
         opacity: 1;

@@ -112,7 +112,7 @@ const AddProductForm = () => {
                             placeholder='Enter info description'
                             value={i.description}
                             onChange={event => changeInfo('description', event.target.value, i.id)} />
-                        <button className='adminpanel__deletebutton' onClick={() => removeInfo(i.id)}>
+                        <button className='deletebutton' onClick={() => removeInfo(i.id)}>
                             Delete info
                         </button>
                     </div>

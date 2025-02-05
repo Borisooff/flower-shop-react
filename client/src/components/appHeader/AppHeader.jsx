@@ -44,14 +44,14 @@ const AppHeader = () => {
               className='header__nav__link'
               style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={SHOP_ROUTE}>Shop</NavLink>
-            <NavLink
+            {/* <NavLink
               className='header__nav__link'
               style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
               to={BLOG_ROUTE}>Blog</NavLink>
             <NavLink
               className='header__nav__link'
               style={({ isActive }) => ({ color: isActive ? '#FF8F52' : 'inherit' })}
-              to={ABOUT_ROUTE}>About</NavLink>
+              to={ABOUT_ROUTE}>About</NavLink> */}
             {
               role === 'ADMIN' ?
                 <NavLink

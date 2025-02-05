@@ -20,15 +20,13 @@ const BestSeleres = () => {
 
     return (
         <section className="bestSelers">
-            <div className="bestSelers__title heading">Best selers</div>
+            <div className="bestSelers__title heading">Best sellers</div>
             <div className="bestSelers__inner">
                 {bestSelers.map(item => {
                     const { id, ...itemProps } = item;
-                    return <ProductCard key={id} {...itemProps} />
+                    return <ProductCard key={id} id={id} {...itemProps} />
                 })}
-                {/* {error ? <ErrorMessage /> : null} */}
             </div>
-            {/* {loading ? <Spinner /> : null} */}
         </section>
     );
 }

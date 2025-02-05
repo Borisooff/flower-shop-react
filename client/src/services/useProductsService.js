@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { fetchAllProducts, fetchOneProduct } from "../http/productsApi";
+import { fetchAllProducts, fetchOneProduct, deleteProductFromBd } from "../http/productsApi";
 import { productsFetched, productsFetchedError, productsFetching, totalChanged } from '../components/shopList/productsSlice';
 
 const useProductsService = () => {
@@ -31,7 +31,12 @@ const useProductsService = () => {
         return res
     }
 
-    return { getAllProducts, getBestSelers, getOneProduct }
+    const deleteProduct = async (id) => {
+        const res = await deleteProductFromBd(id)
+        return res;
+    }
+
+    return { getAllProducts, getBestSelers, getOneProduct, deleteProduct }
 }
 
 export default useProductsService;

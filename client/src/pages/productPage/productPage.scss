@@ -14,18 +14,16 @@
         }
     }
 
-    &__content {
-        // max-width: 200px;
-    }
-
     &__title {
         font-size: 1.8rem;
         margin-bottom: 15px;
     }
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         position: relative;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #FF8F52;
     }
 
     &__rating {
@@ -34,7 +32,7 @@
         &::before {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 30%;
             transform: translateY(-55%);
             left: 12px;
             width: 30px;
@@ -47,10 +45,16 @@
         &__item {
             &__title {
                 margin-bottom: 10px;
-                font-size: 1.2rem
+                font-size: 1.2rem;
+                font-weight: 600;
             }
         }
     }
+}
+
+
+.productcard__info__button {
+    margin-bottom: 15px;
 }
 
 .productpage {

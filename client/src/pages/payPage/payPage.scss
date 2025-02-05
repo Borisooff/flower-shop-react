@@ -1,0 +1,35 @@
+.cart__list {
+    margin-top: 25px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        &__img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: flex-start;
+        }
+    }
+
+}
+
+.delete__product {
+    cursor: pointer;
+}
+
+.productpage__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}

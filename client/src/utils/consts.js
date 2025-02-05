@@ -7,4 +7,5 @@ export const PRODUCT_ROUTE = '/product';
 export const BLOG_ROUTE = '/blog';
 export const ABOUT_ROUTE = '/about';
 export const SHOP_ROUTE = '/shop';
+export const PAY_ROUTE = '/pay';
 export const PAGE_404 = '*';

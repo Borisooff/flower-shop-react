@@ -1,59 +1,64 @@
 import { lazy } from "react";
 
-import {ABOUT_ROUTE, ADMIN_ROUTE, CART_ROUTE, PRODUCT_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, MAIN_ROUTE, BLOG_ROUTE, PAGE_404} from "./utils/consts";
+import { ABOUT_ROUTE, ADMIN_ROUTE, CART_ROUTE, PRODUCT_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, MAIN_ROUTE, BLOG_ROUTE, PAGE_404, PAY_ROUTE } from "./utils/consts";
 
-const MainPage = lazy(()=> import('./pages/mainPage/MainPage'));
-const ShopPage = lazy(()=> import('./pages/shopPage/ShopPage'));
-const CartPage = lazy(()=> import('./pages/cartPage/CartPage'));
-const BlogPage = lazy(()=> import('./pages/blogPage/BlogPage'));
-const AboutPage = lazy(()=> import('./pages/aboutPage/AboutPage'));
-const AdminPage = lazy(()=> import('./pages/adminPage/AdminPage'));
-const LoginPage = lazy(()=> import('./pages/loginPage/LoginPage'));
-const ProductPage = lazy(()=> import('./pages/productPage/ProductPage'));
-const Page404 = lazy(()=> import('./pages/page404/Page404'));
+const MainPage = lazy(() => import('./pages/mainPage/MainPage'));
+const ShopPage = lazy(() => import('./pages/shopPage/ShopPage'));
+const CartPage = lazy(() => import('./pages/cartPage/CartPage'));
+const BlogPage = lazy(() => import('./pages/blogPage/BlogPage'));
+const AboutPage = lazy(() => import('./pages/aboutPage/AboutPage'));
+const AdminPage = lazy(() => import('./pages/adminPage/AdminPage'));
+const LoginPage = lazy(() => import('./pages/loginPage/LoginPage'));
+const ProductPage = lazy(() => import('./pages/productPage/ProductPage'));
+const Page404 = lazy(() => import('./pages/page404/Page404'));
+const PayPage = lazy(() => import('./pages/payPage/PayPage'));
 
 export const authRoutes = [
     {
         path: ADMIN_ROUTE,
-        Component: <AdminPage/>
+        Component: <AdminPage />
     },
     {
         path: CART_ROUTE,
-        Component: <CartPage/>
+        Component: <CartPage />
     },
 ]
 
 export const publicRoutes = [
     {
         path: MAIN_ROUTE,
-        Component: <MainPage/>
+        Component: <MainPage />
     },
     {
         path: SHOP_ROUTE,
-        Component: <ShopPage/>
+        Component: <ShopPage />
     },
     {
         path: BLOG_ROUTE,
-        Comment: <BlogPage/>
+        Comment: <BlogPage />
     },
     {
         path: ABOUT_ROUTE,
-        Comment: <AboutPage/>
+        Comment: <AboutPage />
     },
     {
         path: LOGIN_ROUTE,
-        Component: <LoginPage/>
+        Component: <LoginPage />
     },
     {
         path: REGISTRATION_ROUTE,
-        Component: <LoginPage/>
+        Component: <LoginPage />
     },
     {
         path: PRODUCT_ROUTE + '/:id',
-        Component: <ProductPage/>
+        Component: <ProductPage />
     },
     {
         path: PAGE_404,
-        Component: <Page404/>
+        Component: <Page404 />
     },
+    {
+        path: PAY_ROUTE,
+        Component: <PayPage />
+    }
 ]

@@ -1,16 +1,16 @@
 const uuid = require('uuid');
 const path = require('path');
-const {Product, ProductInfo} = require('../models/models');
+const { Product, ProductInfo } = require('../models/models');
 const ApiError = require('../error/ApiError');
 
 class ProductController {
     async create(req, res, next) {
         try {
-            let {title, price, categoryId, info} = req.body
-            const {img} = req.files
+            let { title, price, categoryId, info } = req.body
+            const { img } = req.files
             let fileName = uuid.v4() + ".jpg"
             img.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const product = await Product.create({title, price, categoryId, img: fileName});
+            const product = await Product.create({ title, price, categoryId, img: fileName });
 
             if (info) {
                 info = JSON.parse(info)
@@ -30,28 +30,44 @@ class ProductController {
     }
 
     async getAll(req, res) {
-        let {categoryId, limit, page} = req.query;
+        let { categoryId, limit, page } = req.query;
         page = page || 1;
         limit = limit || 12;
         let offset = page * limit - limit;
         let products;
-        if(categoryId){
-            products = await Product.findAndCountAll({where:{categoryId}, limit, offset})
+        if (categoryId) {
+            products = await Product.findAndCountAll({ where: { categoryId }, limit, offset })
         } else {
-            products = await Product.findAndCountAll({limit, offset})
+            products = await Product.findAndCountAll({ limit, offset })
         }
         return res.json(products)
     }
 
     async getOne(req, res) {
-        const {id} = req.params;
+        const { id } = req.params;
         const product = await Product.findOne(
             {
-                where:{id},
-                include: [{model: ProductInfo, as: 'info'}]
+                where: { id },
+                include: [{ model: ProductInfo, as: 'info' }]
             }
         )
         return res.json(product)
+    }
+
+    async delete(req, res) {
+        const { id } = req.params;
+        try {
+            const product = await Product.findOne({ where: { id } });
+            if (!product) {
+                return next(ApiError.notFound('Продукт не найден.'));
+            }
+
+            await Product.destroy({ where: { id } });
+
+            return res.json({ message: 'Продукт успешно удалён.' });
+        } catch (e) {
+            return next(ApiError.internal(e.message));
+        }
     }
 }
 
